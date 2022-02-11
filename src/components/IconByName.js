@@ -1,34 +1,33 @@
 import React from "react";
 import { IconButton as IconButtonCustom, Stack } from "native-base";
-import {
-  ArrowCircleLeftOutlined,
-  ArrowCircleRightOutlined,
-  AssignmentTurnedIn,
-  CalendarToday,
-  Email,
-  EventNote,
-  Group,
-  Home,
-  InsertEmoticon,
-  Login,
-  MoreVert,
-  Person,
-  Menu,
-  ArrowForwardIos,
-  AppRegistration,
-  MenuBook,
-  CameraAlt,
-  ArrowDropDown,
-  ArrowDropUp,
-  Edit,
-  KeyboardBackspace,
-  Search,
-  Close,
-  Class,
-  Check,
-} from "@mui/icons-material";
+import LightbulbFlashLineIcon from "remixicon-react/LightbulbFlashLineIcon";
+import Home4LineIcon from "remixicon-react/Home4LineIcon";
+import ParentLineIcon from "remixicon-react/ParentLineIcon";
+import FootballLineIcon from "remixicon-react/FootballLineIcon";
+import UserFollowLineIcon from "remixicon-react/UserFollowLineIcon";
+import Medal2LineIcon from "remixicon-react/Medal2LineIcon";
+import ArrowLeftLineIcon from "remixicon-react/ArrowLeftLineIcon";
+import More2LineIcon from "remixicon-react/More2LineIcon";
+import TeamLineIcon from "remixicon-react/TeamLineIcon";
+import GovernmentLineIcon from "remixicon-react/GovernmentLineIcon";
+import BookOpenLineIcon from "remixicon-react/BookOpenLineIcon";
+import UserLineIcon from "remixicon-react/UserLineIcon";
+import ArrowLeftSLineIcon from "remixicon-react/ArrowLeftSLineIcon";
+import ArrowRightSLineIcon from "remixicon-react/ArrowRightSLineIcon";
+import ArrowUpSLineIcon from "remixicon-react/ArrowUpSLineIcon";
+import ArrowDownSLineIcon from "remixicon-react/ArrowDownSLineIcon";
+import CalendarCheckLineIcon from "remixicon-react/CalendarCheckLineIcon";
+import PencilLineIcon from "remixicon-react/PencilLineIcon";
+import CheckboxCircleLineIcon from "remixicon-react/CheckboxCircleLineIcon";
+import CloseCircleLineIcon from "remixicon-react/CloseCircleLineIcon";
+import CheckboxBlankCircleLineIcon from "remixicon-react/CheckboxBlankCircleLineIcon";
+import CheckLineIcon from "remixicon-react/CheckLineIcon";
+import Loader4LineIcon from "remixicon-react/Loader4LineIcon";
+import UserSmileLineIcon from "remixicon-react/UserSmileLineIcon";
+import ListUnorderedIcon from "remixicon-react/ListUnorderedIcon";
+import EmotionUnhappyLineIcon from "remixicon-react/EmotionUnhappyLineIcon";
 
-function IconButton({ icon, isDisabled, ...props }) {
+function IconButton({ icon, isDisabled, prefix, _fontawesome, ...props }) {
   if (!isDisabled) {
     return (
       <IconButtonCustom
@@ -37,91 +36,93 @@ function IconButton({ icon, isDisabled, ...props }) {
       />
     );
   } else {
-    return <Stack {...props}>{React.cloneElement(icon, props._icon)}</Stack>;
+    return <Stack {...props}>{icon}</Stack>;
   }
 }
 
 export default function IconByName(props) {
   let icon = <></>;
-
   switch (props.name) {
-    case "Home":
-      icon = <IconButton {...props} icon={<Home />} />;
+    case "ParentLineIcon":
+      icon = <IconButton {...props} icon={<ParentLineIcon />} />;
       break;
-    case "Group":
-      icon = <IconButton {...props} icon={<Group />} />;
+    case "LightbulbFlashLineIcon":
+      icon = <IconButton {...props} icon={<LightbulbFlashLineIcon />} />;
       break;
-    case "EventNote":
-      icon = <IconButton {...props} icon={<EventNote />} />;
+    case "FootballLineIcon":
+      icon = <IconButton {...props} icon={<FootballLineIcon />} />;
       break;
-    case "CalendarToday":
-      icon = <IconButton {...props} icon={<CalendarToday />} />;
+    case "UserFollowLineIcon":
+      icon = <IconButton {...props} icon={<UserFollowLineIcon />} />;
       break;
-    case "Person":
-      icon = <IconButton {...props} icon={<Person />} />;
+    case "Medal2LineIcon":
+      icon = <IconButton {...props} icon={<Medal2LineIcon />} />;
       break;
-    case "Email":
-      icon = <IconButton {...props} icon={<Email />} />;
+    case "ArrowLeftLineIcon":
+      icon = <IconButton {...props} icon={<ArrowLeftLineIcon />} />;
       break;
-    case "AssignmentTurnedIn":
-      icon = <IconButton {...props} icon={<AssignmentTurnedIn />} />;
+    case "More2LineIcon":
+      icon = <IconButton {...props} icon={<More2LineIcon />} />;
       break;
-    case "ArrowCircleLeftOutlined":
-      icon = <IconButton {...props} icon={<ArrowCircleLeftOutlined />} />;
+    case "TeamLineIcon":
+      icon = <IconButton {...props} icon={<TeamLineIcon />} />;
       break;
-    case "ArrowCircleRightOutlined":
-      icon = <IconButton {...props} icon={<ArrowCircleRightOutlined />} />;
+    case "GovernmentLineIcon":
+      icon = <IconButton {...props} icon={<GovernmentLineIcon />} />;
       break;
-    case "InsertEmoticon":
-      icon = <IconButton {...props} icon={<InsertEmoticon />} />;
+    case "BookOpenLineIcon":
+      icon = <IconButton {...props} icon={<BookOpenLineIcon />} />;
       break;
-    case "Menu":
-      icon = <IconButton {...props} icon={<Menu />} />;
+    case "UserLineIcon":
+      icon = <IconButton {...props} icon={<UserLineIcon />} />;
       break;
-    case "MoreVert":
-      icon = <IconButton {...props} icon={<MoreVert />} />;
+    case "ArrowLeftSLineIcon":
+      icon = <IconButton {...props} icon={<ArrowLeftSLineIcon />} />;
       break;
-    case "Login":
-      icon = <IconButton {...props} icon={<Login />} />;
+    case "ArrowRightSLineIcon":
+      icon = <IconButton {...props} icon={<ArrowRightSLineIcon />} />;
       break;
-    case "ArrowForwardIos":
-      icon = <IconButton {...props} icon={<ArrowForwardIos />} />;
+    case "ArrowDownSLineIcon":
+      icon = <IconButton {...props} icon={<ArrowDownSLineIcon />} />;
       break;
-    case "AppRegistration":
-      icon = <IconButton {...props} icon={<AppRegistration />} />;
+    case "ArrowUpSLineIcon":
+      icon = <IconButton {...props} icon={<ArrowUpSLineIcon />} />;
       break;
-    case "MenuBook":
-      icon = <IconButton {...props} icon={<MenuBook />} />;
+    case "CalendarCheckLineIcon":
+      icon = <IconButton {...props} icon={<CalendarCheckLineIcon />} />;
       break;
-    case "CameraAlt":
-      icon = <IconButton {...props} icon={<CameraAlt />} />;
+    case "PencilLineIcon":
+      icon = <IconButton {...props} icon={<PencilLineIcon />} />;
       break;
-    case "ArrowDropDown":
-      icon = <IconButton {...props} icon={<ArrowDropDown />} />;
+    case "CheckboxCircleLineIcon":
+      icon = <IconButton {...props} icon={<CheckboxCircleLineIcon />} />;
       break;
-    case "ArrowDropUp":
-      icon = <IconButton {...props} icon={<ArrowDropUp />} />;
+    case "CloseCircleLineIcon":
+      icon = <IconButton {...props} icon={<CloseCircleLineIcon />} />;
       break;
-    case "Edit":
-      icon = <IconButton {...props} icon={<Edit />} />;
+    case "CheckboxBlankCircleLineIcon":
+      icon = <IconButton {...props} icon={<CheckboxBlankCircleLineIcon />} />;
       break;
-    case "KeyboardBackspace":
-      icon = <IconButton {...props} icon={<KeyboardBackspace />} />;
+    case "CheckLineIcon":
+      icon = <IconButton {...props} icon={<CheckLineIcon />} />;
       break;
-    case "Search":
-      icon = <IconButton {...props} icon={<Search />} />;
+    case "Loader4LineIcon":
+      icon = <IconButton {...props} icon={<Loader4LineIcon />} />;
       break;
-    case "Close":
-      icon = <IconButton {...props} icon={<Close />} />;
+    case "UserSmileLineIcon":
+      icon = <IconButton {...props} icon={<UserSmileLineIcon />} />;
       break;
-    case "Class":
-      icon = <IconButton {...props} icon={<Class />} />;
+    case "ListUnorderedIcon":
+      icon = <IconButton {...props} icon={<ListUnorderedIcon />} />;
       break;
-    case "Check":
-      icon = <IconButton {...props} icon={<Check />} />;
+    case "EmotionUnhappyLineIcon":
+      icon = <IconButton {...props} icon={<EmotionUnhappyLineIcon />} />;
       break;
     default:
-      icon = <IconButton {...props} icon={<Home />} />;
+      if (props.name !== "Home4LineIcon") {
+        console.warn(props.name);
+      }
+      icon = <IconButton {...props} icon={<Home4LineIcon />} />;
       break;
   }
   return icon;
